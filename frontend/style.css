@@ -20,9 +20,9 @@ body {
 }
 
 .language-switch button.active-lang {
-  background-color: #007bff;
+  background-color: #0b3c5d;
   color: white;
-  border-color: #007bff;
+  border-color: #0b3c5d;
 }
 /* ===================================================== */
 
@@ -36,9 +36,9 @@ body {
   align-items: center;
 
   padding: 0px 20px;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
-  color: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #f7f8f9, #f6f7f8);
+  color: rgb(37, 35, 35);
+  box-shadow: 0 10px 25px rgba(43, 43, 43, 0.15);
 }
 
 /* Logo */
@@ -55,7 +55,7 @@ body {
 }
 
 .nav-links a {
-  color: white;
+  color: rgb(11, 4, 4);
   text-decoration: none;
   font-weight: 500;
   position: relative;
@@ -69,8 +69,12 @@ body {
   bottom: -6px;
   width: 0%;
   height: 2px;
-  background: white;
+  /* background-color: rgb(210, 121, 88);  */
   transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #7a6ce4; /* yellow highlight (school-friendly) */
 }
 
 .nav-links a:hover::after {
@@ -117,7 +121,7 @@ body {
     top: 70px;
     left: 0;
     width: 100%;
-    background: linear-gradient(135deg, #2563eb, #1e40af);
+    background: linear-gradient(135deg, #3266d5, #365cdb);
     flex-direction: column;
     align-items: center;
     gap: 18px;
@@ -139,7 +143,7 @@ body {
 /* ================= FOOTER ================= */
 
 .footer {
-  background: #0f172a; /* Dark blue */
+  background: #48619a; /* Dark blue */
   color: #e5e7eb;
   margin-top: 60px;
   font-size: 15px;
@@ -159,7 +163,7 @@ body {
 
 .footer-logo {
   font-size: 26px;
-  color: #38bdf8;
+  color: #45abd7;
   margin-bottom: 15px;
 }
 
@@ -185,7 +189,7 @@ body {
 }
 
 .footer-section ul li a:hover {
-  color: #38bdf8;
+  color: #7cbbd6;
 }
 
 /* Social icons */
@@ -197,7 +201,7 @@ body {
 
 .social-icons a {
   font-size: 22px;
-  background: #1e293b;
+  background: #374f76;
   padding: 10px;
   border-radius: 50%;
   color: white;
@@ -208,13 +212,13 @@ body {
 }
 
 .social-icons a:hover {
-  background: #38bdf8;
+  background: #282b2c;
   transform: translateY(-3px);
 }
 
 /* Bottom bar */
 .footer-bottom {
-  background: #020617;
+  background: #091138;
   text-align: center;
   padding: 15px;
   border-top: 1px solid #1e293b;
@@ -361,7 +365,7 @@ body {
   display: block;
   width: 80px;
   height: 4px;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #3c61b1, #1e40af);
   margin-top: 10px;
   border-radius: 4px;
 }
@@ -389,7 +393,7 @@ body {
 
 /* Light background */
 .light-bg {
-  background: linear-gradient(180deg, #f1f5f9, #ffffff);
+  background: linear-gradient(180deg, #ccd0d4, #ffffff);
 }
 
 /* ================= ANIMATIONS ================= */
@@ -454,7 +458,7 @@ body {
   gap: 50px;
 
   padding: 80px 10%;
-  background: linear-gradient(135deg, #1e40af, #2563eb);
+  background: linear-gradient(135deg, #3954ae, #5682e1);
   color: white;
   overflow: hidden;
 
@@ -663,7 +667,7 @@ body {
   background: #ffffff;
   padding: 35px;
   border-radius: 18px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 20px 40px rgba(21, 19, 19, 0.08);
   border-top: 5px solid #2563eb;
 
   transition:
@@ -675,7 +679,7 @@ body {
 /* Hover effect */
 .about-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 35px 70px rgba(17, 2, 2, 0.15);
 }
 
 /* Header */
@@ -728,11 +732,11 @@ body {
 /* ================= ANIMATION ================= */
 @keyframes fadeUp {
   from {
-    opacity: 0;
+    opacity: 5;
     transform: translateY(35px);
   }
   to {
-    opacity: 1;
+    opacity: 10;
     transform: translateY(0);
   }
 }
@@ -803,7 +807,7 @@ body {
 
 /* Hero */
 .contact-hero {
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #2266f8, #1e40af);
   color: white;
   text-align: center;
   padding: 100px 20px;
@@ -886,7 +890,7 @@ body {
 .contact-form input:focus,
 .contact-form textarea:focus {
   outline: none;
-  border-color: #2563eb;
+  border-color: #3c74ec;
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
 }
 
@@ -895,7 +899,7 @@ body {
   padding: 14px;
   border-radius: 999px;
   border: none;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #5180e6, #3a65f1);
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -1048,7 +1052,7 @@ body {
 }
 
 .rehab-container {
-  max-width: 1100px;
+  max-width: 2000px;
   margin: auto;
   padding: 0 20px;
 }
@@ -1081,14 +1085,14 @@ body {
   margin-bottom: 50px;
   animation: fadeUp 0.9s ease forwards;
 }
-
+/* 
 .rehab-activities h3 {
   color: #1e40af;
   margin-bottom: 15px;
 }
 
 .rehab-activities ul {
-  padding-left: 20px;
+  padding-right: 400px;
 }
 
 .rehab-activities li {
@@ -1096,8 +1100,30 @@ body {
   font-size: 16px;
   color: #374151;
   line-height: 1.7;
+} */
+
+.rehab-activities h3 {
+  color: #1e40af;
+  margin-bottom: 15px;
+  text-align: center; /* Added to center the heading too */
 }
 
+.rehab-activities ul {
+  padding: 0; /* Remove that 400px padding */
+  list-style: none; /* Optional: removes bullets for a cleaner centered look */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Ensures the list container itself is centered */
+}
+
+.rehab-activities li {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.7;
+  width: 100%; /* Ensures the text has room to center */
+}
 /* Future Facilities */
 .rehab-future h3 {
   font-size: 28px;

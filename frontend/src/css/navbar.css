@@ -1,0 +1,141 @@
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 90px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 90px;
+
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.logo {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+/* =====================================================
+   NAV LINKS (DESKTOP)
+===================================================== */
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease;
+}
+
+/* Underline hover animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* =====================================================
+   HAMBURGER
+===================================================== */
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.hamburger span {
+  width: 28px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 25px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+
+    padding: 30px 0;
+
+    transform: translateY(-120%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}

@@ -33,10 +33,10 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-
+// import "../css/navbar.css";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const { t, i18n } = useTranslation();
+
   const { t, i18n } = useTranslation("common");
 
   const changeLanguage = (lng) => {
@@ -45,7 +45,7 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">PJV</h2>
+      <h2 className="logo">{t("hero.title")}</h2>
 
       {/* Hamburger */}
       <div

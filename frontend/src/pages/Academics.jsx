@@ -137,7 +137,7 @@ export default function Academics() {
 
         <div className="academics-highlight fade-up">
           <p>
-            <strong>{t("highlight.text")}</strong>
+            <strong style={{ fontSize: "20px" }}>{t("highlight.text")}</strong>
           </p>
         </div>
       </div>

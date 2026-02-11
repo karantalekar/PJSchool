@@ -1,15 +1,13 @@
-/* Root Section */
-.academics {
+/* .academics {
   background: linear-gradient(180deg, #f8fafc, #ffffff);
   padding-bottom: 80px;
   font-family: "Inter", "Segoe UI", sans-serif;
 }
 
-/* Hero */
 .academics-hero {
   text-align: center;
   padding: 90px 20px 70px;
-  background: linear-gradient(135deg, #2563eb, #1e40af);
+  background: linear-gradient(135deg, #1e3a8a, #2563eb, #3b82f6);
   color: #ffffff;
 }
 
@@ -26,14 +24,12 @@
   opacity: 0.95;
 }
 
-/* Container */
 .academics-container {
   max-width: 1100px;
   margin: -60px auto 0;
   padding: 0 20px;
 }
 
-/* Cards */
 .academics-card {
   background: #ffffff;
   padding: 35px;
@@ -53,8 +49,6 @@
   line-height: 1.8;
   color: #374151;
 }
-
-/* Stats */
 .academics-stats {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -82,7 +76,6 @@
   color: #1f2937;
 }
 
-/* Classification */
 .classification-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -95,7 +88,9 @@
   padding: 22px;
   border-radius: 14px;
   border-left: 5px solid #2563eb;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .class-card:hover {
@@ -114,7 +109,6 @@
   color: #374151;
 }
 
-/* Highlight */
 .academics-highlight {
   background: linear-gradient(135deg, #2563eb, #1e40af);
   color: #ffffff;
@@ -124,7 +118,6 @@
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
 }
 
-/* Animations */
 .fade-up {
   animation: fadeUp 1s ease forwards;
 }
@@ -166,7 +159,6 @@
   }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .academics-hero h1 {
     font-size: 36px;
@@ -174,5 +166,443 @@
 
   .academics-card {
     padding: 25px;
+  }
+} */
+
+/* =====================================================
+   GLOBAL SETTINGS
+===================================================== */
+
+/* * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Times New Roman", serif;
+} */
+
+/* =====================================================
+   GLOBAL SETTINGS
+===================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* =====================================================
+   COLOR VARIABLES (BLUE + WHITE)
+===================================================== */
+
+:root {
+  --blue-dark: #231e8a;
+  --blue-medium: #2563eb;
+  --blue-light: #3b82f6;
+  --white: #ffffff;
+  --glass: rgba(255, 255, 255, 0.35);
+}
+
+/* =====================================================
+   ROOT SECTION
+===================================================== */
+
+.academics {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eaf2ff, #ffffff);
+  padding-bottom: 80px;
+}
+
+/* =====================================================
+   HERO SECTION
+===================================================== */
+/* =====================================================
+   ACADEMICS HERO (IMPROVED)
+===================================================== */
+
+.academics-hero {
+  position: relative;
+  text-align: center;
+  padding: clamp(50px, 1vw, 160px) 20px;
+  background: linear-gradient(135deg, var(--blue-dark), var(--blue-light));
+  color: var(--white);
+  overflow: hidden;
+}
+
+/* Animated Gradient Background */
+.academics-hero::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.15),
+    transparent 70%
+  );
+  animation: heroGlow 8s linear infinite;
+}
+
+/* Content Above Glow */
+.academics-hero * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Heading */
+.academics-hero h1 {
+  font-size: clamp(66px, 6vw, 60px);
+  margin-bottom: 25px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  animation: slideFadeDown 1.2s ease forwards;
+}
+
+/* Subtext */
+.academics-hero p {
+  max-width: 820px;
+  margin: auto;
+  font-size: clamp(16px, 2vw, 25px);
+  line-height: 1.9;
+  opacity: 0;
+
+  animation: slideFadeUp 1.4s ease forwards;
+  animation-delay: 0.3s;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+/* Heading animation */
+@keyframes slideFadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Paragraph animation */
+@keyframes slideFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Glow animation */
+@keyframes heroGlow {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+/* =====================================================
+   ACADEMICS CONTAINER (IMPROVED)
+===================================================== */
+
+.academics-container {
+  width: min(95%, 2300px);
+  margin: clamp(20px, 5vw, 40px) auto 0;
+  padding: 0 clamp(15px, 3vw, 30px);
+
+  position: relative;
+  z-index: 2;
+
+  animation: containerFadeUp 1s ease forwards;
+}
+
+/* Subtle Floating Effect */
+.academics-container:hover {
+  transform: translateY(-4px);
+  transition: transform 0.4s ease;
+}
+
+/* =====================================================
+   ANIMATION
+===================================================== */
+
+@keyframes containerFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.academics-card,
+.stat-card,
+.class-card {
+  background: var(--glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(180px);
+
+  border-radius: 20px;
+  padding: clamp(22px, 3vw, 40px);
+  margin-bottom: 40px;
+
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+
+  transition: 0.4s ease;
+}
+
+/* Hover Animation */
+.academics-card,
+.stat-card,
+.class-card {
+  transition:
+    transform 0.8s ease,
+    box-shadow 0.4s ease;
+}
+
+.academics-card:hover,
+.stat-card:hover,
+.class-card:hover {
+  transform: rotateY(360deg);
+  box-shadow: 0 25px 60px rgba(37, 99, 235, 0.35);
+}
+
+/* =====================================================
+   CARD TEXT
+===================================================== */
+
+/* =====================================================
+   CARD HEADINGS (IMPROVED)
+===================================================== */
+
+.academics-card h2 {
+  font-size: clamp(20px, 2.5vw, 35px);
+  margin-bottom: 18px;
+  color: #2563eb;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+
+  animation: fadeSlideDown 0.8s ease forwards;
+}
+
+.class-card h3 {
+  font-size: clamp(20px, 2.5vw, 35px);
+  margin-bottom: 18px;
+  color: #1e40af;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  position: relative;
+
+  animation: fadeSlideDown 0.8s ease forwards;
+}
+
+/* =====================================================
+   CARD PARAGRAPH (IMPROVED)
+===================================================== */
+
+.academics-card p,
+.class-card p {
+  font-size: clamp(20px, 1.4vw, 18px);
+  line-height: 1.9;
+  color: #1a1f25;
+  opacity: 0.2;
+
+  animation: fadeSlideUp 0.9s ease forwards;
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   STATS SECTION
+===================================================== */
+
+.academics-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+  gap: 40px;
+  margin: 60px 0;
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-card span {
+  font-size: clamp(50px, 5vw, 50px);
+  font-weight: bold;
+  display: block;
+  margin-bottom: 10px;
+  transition: 0.3s ease;
+  color: #1e40af;
+}
+
+.stat-card:hover span {
+  transform: scale(1.1);
+  color: #1e40af;
+}
+
+.stat-card p {
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+
+/* =====================================================
+   CLASSIFICATION GRID
+===================================================== */
+
+.classification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 50px;
+  margin-top: 20px;
+}
+
+/* =====================================================
+   HIGHLIGHT SECTION
+===================================================== */
+
+.academics-highlight {
+  padding: clamp(25px, 4vw, 50px);
+  border-radius: 20px;
+  text-align: center;
+  font-size: clamp(20px, 2vw, 20px);
+  background-color: #ffffff;
+  /* background: linear-gradient(135deg, var(--blue-dark), var(--blue-light)); */
+  color: #1e40af;
+  box-shadow: 0 20px 50px rgba(33, 12, 128, 0.35);
+  transition: 0.3s ease;
+}
+
+.academics-highlight:hover {
+  transform: scale(1.02);
+}
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+.fade-up {
+  animation: fadeUp 1s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 1s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================================================
+   RESPONSIVE BREAKPOINTS
+===================================================== */
+
+/* Tablet */
+@media (max-width: 992px) {
+  .academics-container {
+    width: 95%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .academics-hero {
+    padding: 80px 15px;
+  }
+
+  .academics-container {
+    margin-top: -40px;
+  }
+
+  .academics-card,
+  .stat-card,
+  .class-card {
+    padding: 22px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .academics-hero {
+    padding: 60px 15px;
+  }
+
+  .academics-highlight {
+    font-size: 15px;
   }
 }
