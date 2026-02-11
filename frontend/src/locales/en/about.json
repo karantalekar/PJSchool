@@ -1,33 +1,116 @@
 {
-  "title": "About Our Institution",
-  "introduction": "Our institution is dedicated to providing quality education and comprehensive support to children with special needs. Since its recognition under the Government Grant-in-Aid Scheme on 26 September 2003, the school has consistently worked towards academic excellence, holistic development, and social inclusion.",
-
-  "mission": "To empower children with special needs through specialized education, therapeutic support, and inclusive opportunities that enable them to lead independent and dignified lives.",
-
-  "vision": "To be a center of excellence in special education by fostering a nurturing environment, professional expertise, and community collaboration.",
-
-  "objectives": [
-    "Provide structured and specialized educational programs.",
-    "Promote holistic development including academic, physical, and social growth.",
-    "Offer medical, counseling, and rehabilitation support services.",
-    "Guide parents in accessing government schemes and welfare benefits.",
-    "Encourage community awareness and inclusion of persons with disabilities."
-  ],
-
-  "staff": {
-    "teaching": "Three professionally trained teachers holding D.S.C. (M.R.) qualifications.",
-    "physicalEducation": "One dedicated Physical Education Instructor.",
-    "medicalSupport": "One paramedical officer and one honorary medical officer.",
-    "supportStaff": "One caregiver, one cleaner, and one peon to ensure a safe and hygienic environment."
+  "hero": {
+    "title": "Prakash Jyot Vidyalaya",
+    "subtitle": "Dedicated to Excellence in Special Education"
   },
 
-  "facilities": [
-    "Free medical consultation and health support.",
-    "Travel pass assistance (Railway, ST, PMT).",
-    "Guidance on government concessions and pension schemes.",
-    "Health and psychological counseling services.",
-    "Support for T.C.R. surgeries and financial aid coordination.",
-    "Government welfare and rehabilitation scheme guidance.",
-    "Dedicated Divyang Counseling Center."
-  ]
+  "intro": {
+    "heading": "Introduction",
+    "schoolInfo": "Institution Information",
+    "trust": "Managed by a registered charitable trust.",
+    "registration1": "Recognized under Government Grant-in-Aid Scheme (26 September 2003).",
+    "registration2": "Committed to academic excellence and inclusion.",
+    "registration3": "Focused on holistic development of children.",
+    "description": "Our institution is dedicated to providing quality education and comprehensive support to children with special needs.",
+    "point1": "Specialized education programs",
+    "point2": "Therapeutic and rehabilitation services",
+    "point3": "Qualified and experienced staff",
+    "point4": "Supportive and inclusive environment"
+  },
+
+  "education": {
+    "heading": "Education for Special Needs",
+    "subheading": "Empowering every child to reach their full potential",
+    "point1": "Structured learning programs",
+    "point2": "Individualized teaching methods",
+    "point3": "Skill-based development",
+    "point4": "Confidence and independence building",
+    "closing": "We believe every child deserves dignity and opportunity."
+  },
+
+  "what": {
+    "heading": "What We Do",
+    "card1": {
+      "title": "Special Education",
+      "description": "Customized academic programs for children with special needs."
+    },
+    "card2": {
+      "title": "Therapy Support",
+      "description": "Physical and psychological development support."
+    },
+    "card3": {
+      "title": "Parental Guidance",
+      "description": "Guidance on welfare schemes and child development."
+    },
+    "card4": {
+      "title": "Skill Development",
+      "description": "Pre-vocational and life skill training."
+    },
+    "card5": {
+      "title": "Community Inclusion",
+      "description": "Promoting awareness and social integration."
+    }
+  },
+
+  "vision": {
+    "title": "Our Vision",
+    "description": "To be a center of excellence in special education."
+  },
+
+  "mission": {
+    "title": "Our Mission",
+    "point1": "Provide specialized education.",
+    "point2": "Promote independence.",
+    "point3": "Ensure medical and counseling support.",
+    "point4": "Encourage inclusive community participation."
+  },
+
+  "values": {
+    "title": "Our Values",
+    "description": "Compassion, dignity, inclusion, and empowerment."
+  },
+
+  "rehab": {
+    "title": "Rehabilitation Services",
+    "description": "Comprehensive rehabilitation and support services.",
+    "activitiesTitle": "Activities",
+    "activity1": "Therapy sessions",
+    "activity2": "Skill development",
+    "activity3": "Medical assistance",
+    "activity4": "Counseling support",
+    "activity5": "Community integration",
+
+    "futureTitle": "Future Plans",
+    "future1": {
+      "title": "Expanded Programs",
+      "description": "Introduce new vocational courses."
+    },
+    "future2": {
+      "title": "Infrastructure Development",
+      "description": "Improve facilities and resources."
+    },
+    "future3": {
+      "title": "Advanced Therapy",
+      "description": "Modern rehabilitation equipment."
+    },
+    "future4": {
+      "title": "Community Outreach",
+      "description": "Increase awareness initiatives."
+    }
+  },
+
+  "bottom": {
+    "card1": {
+      "title": "Learning Environment",
+      "description": "Safe and supportive classrooms."
+    },
+    "card2": {
+      "title": "Student Activities",
+      "description": "Encouraging creativity and talent."
+    },
+    "card3": {
+      "title": "Holistic Growth",
+      "description": "Academic, physical, and social development."
+    }
+  }
 }
