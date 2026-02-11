@@ -1,0 +1,1189 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= NAVBAR ================= */
+.language-switch {
+  display: flex;
+  gap: 8px;
+  margin-left: 15px;
+}
+
+.language-switch button {
+  background: transparent;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.language-switch button.active-lang {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+/* ===================================================== */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0px 20px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Links (Desktop) */
+.nav-links {
+  display: flex;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+/* Underline animation */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ================= HAMBURGER ================= */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #2563eb, #1e40af);
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    padding: 25px 0;
+
+    transform: translateY(-120%);
+    transition: transform 0.4s ease;
+  }
+
+  .nav-links.open {
+    transform: translateY(0);
+  }
+
+  .nav-links a {
+    font-size: 18px;
+  }
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  background: #0f172a; /* Dark blue */
+  color: #e5e7eb;
+  margin-top: 60px;
+  font-size: 15px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+  padding: 60px 10%;
+}
+
+.footer-section h3 {
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.footer-logo {
+  font-size: 26px;
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  line-height: 1.7;
+  margin-bottom: 10px;
+}
+
+/* Footer links */
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: #38bdf8;
+}
+
+/* Social icons */
+.social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  font-size: 22px;
+  background: #1e293b;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
+  text-decoration: none;
+  transition:
+    background 0.3s,
+    transform 0.3s;
+}
+
+.social-icons a:hover {
+  background: #38bdf8;
+  transform: translateY(-3px);
+}
+
+/* Bottom bar */
+.footer-bottom {
+  background: #020617;
+  text-align: center;
+  padding: 15px;
+  border-top: 1px solid #1e293b;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+/* Responsive tweak */
+@media (max-width: 600px) {
+  .footer-container {
+    padding: 40px 5%;
+  }
+}
+
+/* ABOUT PAGE */
+/* ================= ABOUT PAGE ================= */
+
+/* ================= ABOUT PAGE ================= */
+.about-page {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+  overflow-x: hidden;
+  position: relative;
+
+  /* Page load animation */
+  animation: aboutFadeIn 0.9s ease-out forwards;
+}
+
+/* Smooth reveal for sections inside About page */
+.about-page > * {
+  animation: sectionReveal 1s ease forwards;
+}
+
+/* ================= KEYFRAMES ================= */
+@keyframes aboutFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .about-page {
+    background: #ffffff;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 600px) {
+  .about-page {
+    min-height: auto;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .about-page,
+  .about-page > * {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* HERO */
+.about-hero {
+  position: relative;
+  height: 80vh;
+}
+
+.about-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.about-hero-overlay h1 {
+  font-size: 3.5rem;
+  margin-bottom: 15px;
+}
+
+.about-hero-overlay p {
+  font-size: 1.2rem;
+  max-width: 800px;
+}
+
+/* SECTIONS */
+
+/* ================= ABOUT SECTION ================= */
+.about-section {
+  padding: 80px 10%;
+  line-height: 1.9;
+  position: relative;
+  animation: sectionFadeUp 0.9s ease forwards;
+}
+
+/* Section Heading */
+.about-section h2 {
+  font-size: 2.4rem;
+  margin-bottom: 22px;
+  color: #2563eb;
+  position: relative;
+  animation: fadeSlideDown 0.8s ease forwards;
+}
+
+/* Animated underline */
+.about-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+/* Lists */
+.about-section ul {
+  margin-left: 22px;
+  margin-top: 15px;
+  animation: fadeSlideUp 0.9s ease forwards;
+}
+
+.about-section li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #374151;
+  position: relative;
+  line-height: 1.7;
+}
+
+/* Custom bullet */
+.about-section li::marker {
+  color: #2563eb;
+  font-size: 18px;
+}
+
+/* Light background */
+.light-bg {
+  background: linear-gradient(180deg, #f1f5f9, #ffffff);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes sectionFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-section {
+    padding: 60px 6%;
+  }
+
+  .about-section h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .about-section,
+  .about-section h2,
+  .about-section ul {
+    animation: none;
+  }
+}
+
+/* ================= ABOUT HIGHLIGHT ================= */
+.about-highlight {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  align-items: center;
+  gap: 50px;
+
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #1e40af, #2563eb);
+  color: white;
+  overflow: hidden;
+
+  animation: sectionReveal 1s ease forwards;
+}
+
+/* CONTENT */
+.about-highlight-content {
+  animation: fadeSlideLeft 1.1s ease forwards;
+}
+
+.about-highlight h2 {
+  font-size: 2.4rem;
+  margin-bottom: 15px;
+}
+
+.about-highlight p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.about-highlight ul {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+.about-highlight li {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.about-highlight li::before {
+  content: "✔";
+  position: absolute;
+  left: -22px;
+  color: #bae6fd;
+}
+
+/* IMAGE */
+.about-highlight-image {
+  display: flex;
+  justify-content: center;
+  animation: fadeSlideRight 1.2s ease forwards;
+}
+
+.about-highlight-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease;
+}
+
+.about-highlight-image img:hover {
+  transform: scale(1.05);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes sectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeSlideRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .about-highlight {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-highlight ul {
+    margin-left: 0;
+  }
+
+  .about-highlight li::before {
+    display: none;
+  }
+
+  .about-highlight-image {
+    margin-top: 40px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .about-highlight,
+  .about-highlight-content,
+  .about-highlight-image {
+    animation: none;
+  }
+}
+
+/* ================= WHAT WE DO ================= */
+.what-we-do-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+/* Card */
+.what-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+  border-left: 5px solid #2563eb;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Hover animation */
+.what-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Card heading */
+.what-card h3 {
+  font-size: 20px;
+  color: #1e40af;
+  margin-bottom: 12px;
+}
+
+/* Card text */
+.what-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .what-we-do-cards {
+    gap: 22px;
+  }
+
+  .what-card {
+    padding: 24px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .what-card {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* ================= ABOUT GRID ================= */
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  padding: 60px 10%;
+  background: #f8fafc;
+}
+
+/* Card */
+.about-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid #2563eb;
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Hover effect */
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.about-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.card-icon {
+  font-size: 1.6rem;
+}
+
+.about-card h3 {
+  font-size: 22px;
+  color: #1e40af;
+  margin: 0;
+}
+
+/* Text */
+.about-card p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* Mission list */
+.about-card-list {
+  padding-left: 18px;
+  margin-top: 10px;
+}
+
+.about-card-list li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #374151;
+  position: relative;
+}
+
+/* Custom bullet */
+.about-card-list li::before {
+  content: "•";
+  color: #2563eb;
+  position: absolute;
+  left: -12px;
+}
+
+/* ================= ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .about-grid {
+    padding: 50px 6%;
+  }
+
+  .about-card {
+    padding: 28px;
+  }
+
+  .about-card h3 {
+    font-size: 20px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .about-card {
+    animation: none;
+    transition: none;
+  }
+}
+
+/* SERVICES */
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+/* IMAGES */
+.about-images {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  padding: 60px 10%;
+}
+
+.image-box {
+  text-align: center;
+}
+
+.image-box img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.image-box h4 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* About page complete  */
+
+/* ================= CONTACT PAGE ================= */
+.contact-page {
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  min-height: 100vh;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+/* Hero */
+.contact-hero {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeDown 1s ease forwards;
+}
+
+.contact-hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.contact-hero p {
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: auto;
+  opacity: 0.95;
+}
+
+/* Container */
+.contact-container {
+  max-width: 1100px;
+  margin: -60px auto 0;
+  padding: 0 20px 80px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+}
+
+/* Contact Info */
+.contact-info {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeLeft 1s ease forwards;
+}
+
+.contact-info h2 {
+  color: #1e40af;
+  margin-bottom: 25px;
+}
+
+.info-item {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.info-item span {
+  font-size: 1.4rem;
+}
+
+/* Form */
+.contact-form {
+  background: white;
+  padding: 40px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  animation: fadeRight 1s ease forwards;
+}
+
+.contact-form h2 {
+  margin-bottom: 25px;
+  color: #1e40af;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.2);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.contact-form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 900px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    margin-top: 0;
+  }
+
+  .contact-hero {
+    padding: 80px 20px;
+  }
+
+  .contact-hero h1 {
+    font-size: 2.4rem;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .contact-hero,
+  .contact-info,
+  .contact-form {
+    animation: none;
+  }
+}
+
+/* Map setection  */
+
+/* ================= MAP SECTION ================= */
+.contact-map {
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  padding: 0 20px;
+  text-align: center;
+  animation: fadeUp 1s ease forwards;
+}
+
+.contact-map h2 {
+  font-size: 2.2rem;
+  color: #1e40af;
+  margin-bottom: 25px;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  height: 420px;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.map-wrapper iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* ================= MAP ANIMATION ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .map-wrapper {
+    height: 300px;
+  }
+
+  .contact-map h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .contact-map {
+    animation: none;
+  }
+}
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* ================= REHABILITATION SECTION ================= */
+.rehab-section {
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  padding: 80px 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.rehab-container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* Title */
+.rehab-title {
+  text-align: center;
+  font-size: 36px;
+  color: #1e40af;
+  margin-bottom: 20px;
+  animation: fadeDown 0.8s ease forwards;
+}
+
+/* Description */
+.rehab-description {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 45px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #374151;
+}
+
+/* Activities */
+.rehab-activities {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  margin-bottom: 50px;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+.rehab-activities h3 {
+  color: #1e40af;
+  margin-bottom: 15px;
+}
+
+.rehab-activities ul {
+  padding-left: 20px;
+}
+
+.rehab-activities li {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #374151;
+  line-height: 1.7;
+}
+
+/* Future Facilities */
+.rehab-future h3 {
+  font-size: 28px;
+  color: #1e40af;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Grid */
+.future-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.future-card {
+  background: #ffffff;
+  padding: 28px;
+  border-radius: 18px;
+  border-left: 5px solid #2563eb;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  animation: fadeUp 1s ease forwards;
+}
+
+.future-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+.future-card h4 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #1e40af;
+}
+
+.future-card p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #374151;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .rehab-title {
+    font-size: 28px;
+  }
+
+  .rehab-activities {
+    padding: 25px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .rehab-title,
+  .rehab-activities,
+  .future-card {
+    animation: none;
+    transition: none;
+  }
+}

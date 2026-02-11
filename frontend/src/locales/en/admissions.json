@@ -1,0 +1,29 @@
+{
+  "title": "Admissions",
+  "faqs": [
+    {
+      "question": "What is the eligibility criteria for admission?",
+      "answer": "Admissions are open to children with special learning needs between the ages of 4 and 18 years."
+    },
+    {
+      "question": "How can I apply for admission?",
+      "answer": "Parents or guardians may visit the school office directly or contact us through the website to initiate the admission process."
+    },
+    {
+      "question": "What is the fee structure, and is financial assistance available?",
+      "answer": "The fee structure is designed to be affordable. Financial assistance may be available for eligible families based on applicable criteria."
+    },
+    {
+      "question": "What does the admission process include?",
+      "answer": "The admission process includes an initial interaction, student assessment, verification of required documents, and final confirmation of admission."
+    },
+    {
+      "question": "Which documents are required for admission?",
+      "answer": "Required documents include the child’s birth certificate, address proof, previous school records (if applicable), and relevant medical or assessment reports."
+    },
+    {
+      "question": "What are the important dates for admission?",
+      "answer": "Admissions remain open throughout the year, subject to seat availability."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "title": "Academics",
+    "subtitle": "A balanced approach to education that nurtures learning, creativity, physical development, and independence."
+  },
+  "learningSection": {
+    "title": "Learning Beyond the Classroom",
+    "paragraph1": "Twice a month, students are taken to Bal Kalyan Sanstha, Pune, a specialized center that supports children through structured guidance in physical, cultural, and creative activities.",
+    "paragraph2": "Students receive training in swimming, dance, physical exercise, singing, playing musical instruments, painting, and handicrafts. Through this holistic exposure, our students have successfully participated and achieved recognition in sports, cultural, and art competitions at the city, district, state, national, and international levels."
+  },
+  "stats": {
+    "totalStudents": "Total Admitted Students",
+    "ageGroup": "Physical Age Group (Years)"
+  },
+  "classification": {
+    "title": "Classification System",
+    "schoolGroup": "School Group",
+    "schoolIQ": "IQ Range: 50 – 69",
+    "vocationalGroup": "Vocational Group",
+    "vocationalIQ": "IQ Range: 35 – 49",
+    "selfRelianceGroup": "Self-Reliance Group",
+    "selfRelianceIQ": "IQ Range: 25 – 35"
+  },
+  "highlight": {
+    "text": "Pre-vocational training is provided for students in the 15 to 18 years physical age group, focusing on practical skills, independence, and preparation for daily life and future opportunities."
+  }
+}

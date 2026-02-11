@@ -1,0 +1,33 @@
+{
+  "title": "About Our Institution",
+  "introduction": "Our institution is dedicated to providing quality education and comprehensive support to children with special needs. Since its recognition under the Government Grant-in-Aid Scheme on 26 September 2003, the school has consistently worked towards academic excellence, holistic development, and social inclusion.",
+
+  "mission": "To empower children with special needs through specialized education, therapeutic support, and inclusive opportunities that enable them to lead independent and dignified lives.",
+
+  "vision": "To be a center of excellence in special education by fostering a nurturing environment, professional expertise, and community collaboration.",
+
+  "objectives": [
+    "Provide structured and specialized educational programs.",
+    "Promote holistic development including academic, physical, and social growth.",
+    "Offer medical, counseling, and rehabilitation support services.",
+    "Guide parents in accessing government schemes and welfare benefits.",
+    "Encourage community awareness and inclusion of persons with disabilities."
+  ],
+
+  "staff": {
+    "teaching": "Three professionally trained teachers holding D.S.C. (M.R.) qualifications.",
+    "physicalEducation": "One dedicated Physical Education Instructor.",
+    "medicalSupport": "One paramedical officer and one honorary medical officer.",
+    "supportStaff": "One caregiver, one cleaner, and one peon to ensure a safe and hygienic environment."
+  },
+
+  "facilities": [
+    "Free medical consultation and health support.",
+    "Travel pass assistance (Railway, ST, PMT).",
+    "Guidance on government concessions and pension schemes.",
+    "Health and psychological counseling services.",
+    "Support for T.C.R. surgeries and financial aid coordination.",
+    "Government welfare and rehabilitation scheme guidance.",
+    "Dedicated Divyang Counseling Center."
+  ]
+}

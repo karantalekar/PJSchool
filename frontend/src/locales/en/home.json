@@ -1,0 +1,70 @@
+{
+  "section": {
+    "highlights": "Our School Highlights",
+    "facilities": "Our Facilities"
+  },
+  "highlights": {
+    "grant": {
+      "title": "Grant-Based Recognition",
+      "description": "Approved under the grant-in-aid scheme from 26 September 2003."
+    },
+    "staff": {
+      "title": "Qualified Teaching Staff",
+      "description": "Three trained teachers with D.S.C (M.R) qualifications."
+    },
+    "pe": {
+      "title": "Physical Education Instructor",
+      "description": "One dedicated physical education instructor."
+    },
+    "activities": {
+      "title": "Student Activities",
+      "description": "Multiple activities for holistic student development."
+    },
+    "events": {
+      "title": "School Events",
+      "description": "Annual cultural and academic events throughout the year."
+    },
+    "medical": {
+      "title": "Medical Officers",
+      "description": "One paramedical officer and one honorary medical officer are available."
+    }
+  },
+  "facilities": {
+    "medicalTreatment": {
+      "title": "Free Medical Treatment",
+      "description": "Free medical treatment is provided to students by the school."
+    },
+    "travelPass": {
+      "title": "Travel Pass Assistance",
+      "description": "Guidance and assistance are provided for obtaining Railway, ST, and PMT travel passes."
+    },
+    "govtConcession": {
+      "title": "Government Concession Guidance",
+      "description": "Guidance on government concessions such as Family Pension, LIC Pension Scheme, and Income Tax benefits for mentally challenged children."
+    },
+    "healthCounseling": {
+      "title": "Health Counseling",
+      "description": "Health-related counseling and guidance are provided to ensure the well-being of children."
+    },
+    "tcrSupport": {
+      "title": "T.C.R Surgery Support",
+      "description": "Guidance and support are provided for T.C.R surgeries, including help in obtaining financial assistance from charitable organizations."
+    },
+    "rehab": {
+      "title": "Government Scheme & Rehabilitation Guidance",
+      "description": "Guidance is provided for availing benefits of various government schemes and rehabilitation services."
+    },
+    "divyang": {
+      "title": "Divyang Counseling Center",
+      "description": "A dedicated counseling and guidance center is available for persons with disabilities (Divyang)."
+    },
+    "supportStaff": {
+      "title": "Support Staff",
+      "description": "One caregiver, one cleaner, and one peon ensuring a clean environment."
+    },
+    "medicalOfficers": {
+      "title": "Medical Officers",
+      "description": "One paramedical officer and one honorary medical officer are available."
+    }
+  }
+}

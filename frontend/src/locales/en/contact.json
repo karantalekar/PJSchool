@@ -1,0 +1,16 @@
+{
+  "heroTitle": "Contact Us",
+  "heroSubtitle": "We’re here to help. Reach out to us for admissions, inquiries, or any assistance you may need.",
+  "getInTouch": "Get in Touch",
+  "formTitle": "Send Us a Message",
+  "name": "Your Name",
+  "email": "Your Email",
+  "subject": "Subject",
+  "message": "Your Message",
+  "send": "Send Message",
+  "sending": "Sending...",
+  "mapTitle": "Find Us on Map",
+  "success": "Email sent successfully!",
+  "failed": "Failed to send email.",
+  "serverError": "Server error. Try again later."
+}

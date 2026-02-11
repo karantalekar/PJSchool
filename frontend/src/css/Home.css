@@ -1,0 +1,372 @@
+/* ================= HOME PAGE ================= */
+.home-content {
+  padding: 80px 10%;
+  background: linear-gradient(180deg, #f8fafc, #ffffff);
+  animation: sectionFadeUp 0.9s ease forwards;
+}
+
+/* Section Heading */
+.home-content h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #1e40af;
+  margin-bottom: 45px;
+  position: relative;
+  animation: fadeDown 0.8s ease forwards;
+}
+
+/* Animated underline */
+.home-content h2::after {
+  content: "";
+  display: block;
+  width: 90px;
+  height: 4px;
+  margin: 12px auto 0;
+  border-radius: 4px;
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+}
+
+/* ================= CARD GRID ================= */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+}
+
+/* ================= CARD (generic support) ================= */
+/* This enhances Card component without touching its CSS */
+.card-grid > * {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  padding: 30px;
+  text-align: center;
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Hover effect */
+.card-grid > *:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 35px 70px rgba(0, 0, 0, 0.15);
+}
+
+/* Card title */
+.card-grid h3 {
+  font-size: 20px;
+  color: #2563eb;
+  margin-bottom: 12px;
+}
+
+/* Card text */
+.card-grid p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #374151;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes sectionFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .home-content {
+    padding: 70px 6%;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-content h2 {
+    font-size: 2rem;
+  }
+
+  .card-grid {
+    gap: 22px;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .home-content,
+  .card-grid > *,
+  .home-content h2 {
+    animation: none;
+    transition: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ================= HERO SECTION ================= */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+/* Dark overlay with gradient */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background: linear-gradient(
+    rgba(30, 64, 175, 0.65),
+    rgba(37, 99, 235, 0.75)
+  ); */
+  z-index: 1;
+}
+
+/* ================= HERO OVERLAY ================= */
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #ffffff;
+  padding: 20px;
+
+  animation: heroFadeUp 1.2s ease forwards;
+}
+
+/* Title */
+.hero-overlay h1 {
+  font-size: 3.6rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+
+  animation: textSlideDown 1s ease forwards;
+}
+
+/* Subtitle */
+.hero-overlay p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  opacity: 0.95;
+
+  animation: textSlideUp 1.1s ease forwards;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes heroFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================= RESPONSIVE ================= */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .hero {
+    height: 75vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 3rem;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2.3rem;
+  }
+
+  .hero-overlay p {
+    font-size: 1.05rem;
+  }
+}
+
+/* Small mobiles */
+@media (max-width: 480px) {
+  .hero {
+    height: 65vh;
+  }
+
+  .hero-overlay h1 {
+    font-size: 2rem;
+  }
+}
+
+/* ================= ACCESSIBILITY ================= */
+@media (prefers-reduced-motion: reduce) {
+  .hero-overlay,
+  .hero-overlay h1,
+  .hero-overlay p {
+    animation: none;
+  }
+}
+
+
+
+
+
+
+
+
+/* ================= CARD ================= */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card image */
+.card img {
+  width: 100%;
+  height: 310px; /* increased from 160px */
+  object-fit: cover; /* ensures image fills the space */
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+/* Card text */
+.card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* ================= RESPONSIVE CARDS ================= */
+@media (max-width: 1024px) {
+  .card img {
+    height: 200px; /* slightly smaller on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .card img {
+    height: 180px; /* smaller on smaller tablets */
+  }
+  .card h3 {
+    font-size: 20px;
+  }
+  .card p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card img {
+    height: 150px; /* mobile-friendly */
+  }
+  .card h3 {
+    font-size: 18px;
+  }
+  .card p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
