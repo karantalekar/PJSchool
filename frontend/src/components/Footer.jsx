@@ -105,8 +105,8 @@ export default function Footer() {
             📍 Prakash Jyot Vidyalay Non-Residential School for Mentally
             Retarded Boys and Girls Hadapsar Pune 28
           </p>
-          <p>📞 26876877</p>
-          <p>✉️ info@abcschool.edu.in</p>
+          <p>📞 9869619368, 9156555937</p>
+          <p>✉️ prakashjyotvidyalaya.pune@gmail.com </p>
         </div>
 
         {/* SOCIAL MEDIA */}
