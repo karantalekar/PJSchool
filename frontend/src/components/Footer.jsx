@@ -102,7 +102,7 @@ export default function Footer() {
         <div className="footer-section">
           <h3>{t("contactUs")}</h3>
           <p>
-            📍 Prakash Jyot Vidyalay Non-Residential School for Mentally
+            📍 Prakash Jyot Vidyalaya Non-Residential School for Mentally
             Retarded Boys and Girls Hadapsar Pune 28
           </p>
           <p>📞 9869619368, 9156555937</p>

@@ -228,19 +228,19 @@ export default function Contact() {
           <div className="info-item">
             <span>📍</span>
             <p>
-              Prakesh Joyt Vidylaya <br />
-              Hadapsar Gaon, Pune, Maharashtra
+              Prakash Jyot Vidyalaya Non-Residential School for Mentally
+              Retarded Boys and Girls Hadapsar Pune 28
             </p>
           </div>
 
           <div className="info-item">
             <span>📞</span>
-            <p>+91 9XXXXXXXXX</p>
+            <p>+91 9156555937</p>
           </div>
 
           <div className="info-item">
             <span>✉️</span>
-            <p>info@your-school.org</p>
+            <p>prakashjyotvidyalaya.pune@gmail.com</p>
           </div>
         </div>
 
