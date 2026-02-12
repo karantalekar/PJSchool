@@ -298,7 +298,7 @@
   perspective: 1000px;
 }
 
-.card:hover {
+.card:hover img {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-  animation: rotate360 0.8s forwards; /* rotate 360 once */
+  animation: rotate360 2s forwards; /* rotate 360 once */
 }
