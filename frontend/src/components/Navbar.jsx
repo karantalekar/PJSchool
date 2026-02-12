@@ -31,11 +31,12 @@
 // }
 
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 // import "../css/navbar.css";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const { t, i18n } = useTranslation("common");
 
@@ -45,8 +46,14 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">{t("hero.title")}</h2>
-
+      <h2
+        className="logo"
+        onClick={() => navigate("/")}
+        style={{ cursor: "pointer" }}
+      >
+        {t("hero.title")}
+      </h2>
+      {/* <h2 className="logo">{t("hero.title")}</h2> */}
       {/* Hamburger */}
       <div
         className={`hamburger ${menuOpen ? "active" : ""}`}
@@ -56,7 +63,6 @@ export default function Navbar() {
         <span></span>
         <span></span>
       </div>
-
       {/* Links */}
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
         <Link to="/" onClick={() => setMenuOpen(false)}>

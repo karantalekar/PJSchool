@@ -302,3 +302,12 @@
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   animation: rotate360 2s forwards; /* rotate 360 once */
 }
+
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
