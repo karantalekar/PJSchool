@@ -184,7 +184,7 @@ body {
 }
 
 .footer-section p i {
-  color: #1f3f8b;
+  color: #ffffff;
   font-size: 18px;
   margin-top: 4px; /* Align icon with first text line */
   min-width: 20px; /* Keeps all rows aligned */
@@ -219,10 +219,10 @@ body {
 
 .social-icons a {
   font-size: 22px;
-  background: #374f76;
+  background: #1e2b43;
   padding: 10px;
   border-radius: 50%;
-  color: white;
+  color: rgb(46, 43, 43);
   text-decoration: none;
   transition:
     background 0.3s,
