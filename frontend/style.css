@@ -167,9 +167,27 @@ body {
   margin-bottom: 15px;
 }
 
-.footer-section p {
-  line-height: 1.7;
+/* .footer-section p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 10px;
+  line-height: 1.6;
+} */
+
+.footer-section p {
+  display: flex;
+  align-items: flex-start; /* Important for multiline text */
+  gap: 10px;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.footer-section p i {
+  color: #1f3f8b;
+  font-size: 18px;
+  margin-top: 4px; /* Align icon with first text line */
+  min-width: 20px; /* Keeps all rows aligned */
 }
 
 /* Footer links */
@@ -971,6 +989,30 @@ body {
   .contact-form {
     animation: none;
   }
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap; /* makes it responsive */
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.info-item i {
+  font-size: 20px;
+  color: #1e40af;
+}
+
+.info-item p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
 /* Map setection  */

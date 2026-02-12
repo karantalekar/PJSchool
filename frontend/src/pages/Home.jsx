@@ -100,9 +100,22 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="home-content">
+      {/* <section className="home-content">
         <h2>{t("section.facilities")}</h2>
         <div className="card-grid">
+          {facilities.map((card, index) => (
+            <Card
+              key={index}
+              title={card.title}
+              description={card.description}
+              image={card.image}
+            />
+          ))}
+        </div>
+      </section> */}
+      <section className="facilities-content">
+        <h2>{t("section.facilities")}</h2>
+        <div className="facilities-grid">
           {facilities.map((card, index) => (
             <Card
               key={index}

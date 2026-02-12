@@ -71,10 +71,12 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         {/* SCHOOL INFO */}
-        {/* <div className="footer-section">
-          <h2 className="footer-logo">PJV</h2>
+        <div className="footer-section">
+          <h2 className="footer-logo" style={{ color: "white" }}>
+            PJV
+          </h2>
           <p>{t("description")}</p>
-        </div> */}
+        </div>
 
         {/* QUICK LINKS */}
         <div className="footer-section">
@@ -99,14 +101,24 @@ export default function Footer() {
         </div>
 
         {/* CONTACT INFO */}
+
         <div className="footer-section">
           <h3>{t("contactUs")}</h3>
-          <p>
-            📍 Prakash Jyot Vidyalaya Non-Residential School for Mentally
-            Retarded Boys and Girls Hadapsar Pune 28
+
+          <p className="footer-item">
+            <i className="fa-solid fa-location-dot"></i>
+            <span>{t("address")}</span>
           </p>
-          <p>📞 9869619368, 9156555937</p>
-          <p>✉️ prakashjyotvidyalaya.pune@gmail.com </p>
+
+          <p className="footer-item">
+            <i className="fa-solid fa-phone"></i>
+            <span>9869619368, 9156555937</span>
+          </p>
+
+          <p className="footer-item">
+            <i className="fa-solid fa-envelope"></i>
+            <span>prakashjyotvidyalaya.pune@gmail.com</span>
+          </p>
         </div>
 
         {/* SOCIAL MEDIA */}

@@ -12,5 +12,6 @@
   "mapTitle": "Find Us on Map",
   "success": "Email sent successfully!",
   "failed": "Failed to send email.",
-  "serverError": "Server error. Try again later."
+  "serverError": "Server error. Try again later.",
+  "address": "Prakash Jyot Vidyalaya Non-Residential School for Mentally Retarded Boys and Girls Hadapsar Pune 28"
 }

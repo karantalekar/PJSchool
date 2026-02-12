@@ -298,7 +298,7 @@
   perspective: 1000px;
 }
 
-.card:hover img {
+.home-content .card:hover img {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
   animation: rotate360 2s forwards; /* rotate 360 once */
 }
@@ -307,7 +307,92 @@
   width: 100%;
   height: 350px;
   object-fit: cover;
+  /* align-items: center; */
   border-radius: 20px;
   margin-bottom: 15px;
   border-radius: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  /* align-items: center; */
+  border-radius: 20px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+/* ================= FACILITIES SECTION ================= */
+
+.facilities-content {
+  padding: 50px 8%;
+}
+
+/* Section Heading */
+.facilities-content h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  color: #25499d;
+  position: relative;
+  font-weight: 700;
+}
+
+/* Small Center Underline */
+.facilities-content h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 3px;
+  background-color: #25499d;
+  margin: 10px auto 0;
+  border-radius: 3px;
+}
+
+/* Grid Layout */
+.facilities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px; /* original gap */
+}
+
+/* Card Style (FULL SIZE — not reduced) */
+.facilities-grid > * {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 10px; /* original padding */
+  text-align: center;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* Hover Effect */
+.facilities-grid > *:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(46, 42, 41, 0.25);
+}
+
+/* Card Image (keep original size if needed) */
+.facilities-content .card img {
+  height: 180px; /* slightly balanced but not shrinking card */
+  width: auto;
+  margin-bottom: 20px;
+  object-fit: contain;
+}
+
+/* Card Title (Bold) */
+.facilities-content .card h3 {
+  font-size: 20px;
+  color: #3b68d3;
+  font-weight: 800; /* Proper bold */
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+/* Card Description */
+.facilities-content .card p {
+  font-size: 16px;
+  color: #444;
+  line-height: 1.6;
 }
